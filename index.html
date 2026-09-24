@@ -1,0 +1,1168 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeoCredit App | Transformación y Gobierno de TI</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script defer src="script.js"></script>
+  </head>
+  <body class="deck-loading">
+    <canvas id="networkCanvas" aria-hidden="true"></canvas>
+    <div class="ambient-grid" aria-hidden="true"></div>
+
+    <div class="deck-progress" aria-hidden="true">
+      <span id="deckProgress"></span>
+    </div>
+
+    <div class="deck-status" aria-live="polite">
+      <span id="slideCounter">01 / 18</span>
+    </div>
+
+    <div class="role-transition" id="roleTransition" aria-hidden="true">
+      <span></span>
+    </div>
+
+    <main class="reveal">
+      <div class="slides">
+        <section class="slide intro-overview-slide" data-short-owner="Equipo / Overview" data-owner="Grupo 3 — Visión general del proyecto">
+          <div class="slide-meta">
+            <span>Grupo 3 · ATI Proyecto Final</span>
+            <strong>Universidad Mariano Gálvez de Guatemala · Ingeniería en Sistemas</strong>
+          </div>
+          <div class="intro-bento-shell">
+            <article class="intro-card intro-main-card stagger">
+              <div class="intro-main-top">
+                <span class="kicker">Visión general del proyecto</span>
+                <span class="intro-micro-badge">4 roles · 1 estrategia integrada</span>
+              </div>
+              <div class="intro-main-copy">
+                <h1>Plan Estratégico<br />de Transformación<br />y Gobierno de TI<br />para NeoCredit App</h1>
+                <p class="intro-lead">De crecimiento acelerado a una operación escalable, segura y gobernada</p>
+                <p class="intro-value">Una propuesta integral que conecta estrategia, ejecución, calidad, seguridad y continuidad del negocio.</p>
+              </div>
+              <div class="intro-globe" aria-hidden="true">
+                <svg viewBox="0 0 520 520" focusable="false">
+                  <defs>
+                    <radialGradient id="introGlobeCore" cx="52%" cy="50%" r="56%">
+                      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.16" />
+                      <stop offset="58%" stop-color="#2563eb" stop-opacity="0.08" />
+                      <stop offset="100%" stop-color="#00e5ff" stop-opacity="0" />
+                    </radialGradient>
+                    <linearGradient id="introGlobeLine" x1="0" x2="1" y1="0" y2="1">
+                      <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.12" />
+                      <stop offset="58%" stop-color="#00e5ff" stop-opacity="0.72" />
+                      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.2" />
+                    </linearGradient>
+                    <filter id="introGlobeGlow" x="-30%" y="-30%" width="160%" height="160%">
+                      <feGaussianBlur stdDeviation="4" result="blur" />
+                      <feMerge>
+                        <feMergeNode in="blur" />
+                        <feMergeNode in="SourceGraphic" />
+                      </feMerge>
+                    </filter>
+                  </defs>
+                  <circle class="globe-halo" cx="270" cy="258" r="205" />
+                  <path class="globe-arc globe-arc-a" d="M70 262c72-112 204-164 332-122" />
+                  <path class="globe-arc globe-arc-b" d="M82 337c91-76 222-95 344-44" />
+                  <path class="globe-arc globe-arc-c" d="M138 112c82 78 94 238 30 350" />
+                  <path class="globe-arc globe-arc-d" d="M294 66c-26 118 12 278 108 360" />
+                  <g class="globe-links">
+                    <path d="M114 318 177 246 238 274 301 196 382 218 425 293" />
+                    <path d="M158 150 230 126 314 164 382 218" />
+                    <path d="M177 246 230 126 301 196 352 328 425 293" />
+                    <path d="M114 318 207 390 352 328 382 218" />
+                    <path d="M238 274 207 390 292 430 352 328" />
+                  </g>
+                  <g class="globe-nodes">
+                    <circle cx="114" cy="318" r="5" />
+                    <circle cx="158" cy="150" r="4" />
+                    <circle cx="177" cy="246" r="5" />
+                    <circle cx="207" cy="390" r="4" />
+                    <circle cx="230" cy="126" r="4" />
+                    <circle cx="238" cy="274" r="5" />
+                    <circle cx="292" cy="430" r="4" />
+                    <circle cx="301" cy="196" r="5" />
+                    <circle cx="314" cy="164" r="4" />
+                    <circle cx="352" cy="328" r="6" />
+                    <circle cx="382" cy="218" r="5" />
+                    <circle cx="425" cy="293" r="4" />
+                  </g>
+                </svg>
+              </div>
+            </article>
+
+            <article class="intro-card role-bento-card role-cio stagger">
+              <div class="role-abstract-icon network-mark" aria-hidden="true">
+                <i></i>
+                <i></i>
+                <i></i>
+              </div>
+              <div>
+                <strong>CIO — David</strong>
+                <p>Diagnóstico, decisión tecnológica, ROI y viabilidad financiera.</p>
+              </div>
+            </article>
+
+            <article class="intro-card role-bento-card role-pm stagger">
+              <div class="role-abstract-icon timeline-mark" aria-hidden="true">
+                <i></i>
+                <i></i>
+                <i></i>
+              </div>
+              <div>
+                <strong>PM — Luis</strong>
+                <p>Project Charter, roadmap, alcance y gestión del cambio.</p>
+              </div>
+            </article>
+
+            <article class="intro-card role-bento-card role-qa stagger">
+              <div class="role-abstract-icon kpi-mark" aria-hidden="true">
+                <i></i>
+                <i></i>
+                <i></i>
+              </div>
+              <div>
+                <strong>QA — Walder</strong>
+                <p>ITIL 4 + Scrum, PDCA, SLAs y KPIs de calidad.</p>
+              </div>
+            </article>
+
+            <article class="intro-card role-bento-card role-ciso stagger">
+              <div class="role-abstract-icon shield-mark" aria-hidden="true">
+                <i></i>
+                <i></i>
+                <i></i>
+              </div>
+              <div>
+                <strong>CISO/DBA — Francisco</strong>
+                <p>Clasificación de datos, matriz de riesgos y DRP.</p>
+              </div>
+            </article>
+
+            <div class="intro-route-ribbon stagger" aria-label="Ruta narrativa del proyecto">
+              <span class="route-node route-diagnosis">
+                <span class="route-icon" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" focusable="false">
+                    <circle cx="27" cy="27" r="15" />
+                    <path d="M39 39 52 52" />
+                  </svg>
+                </span>
+                <em>Diagnóstico</em>
+              </span>
+              <i></i>
+              <span class="route-node route-decision">
+                <span class="route-icon" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" focusable="false">
+                    <circle cx="32" cy="32" r="19" />
+                    <circle cx="32" cy="32" r="9" />
+                    <path d="M32 9v10M32 45v10M9 32h10M45 32h10" />
+                  </svg>
+                </span>
+                <em>Decisión</em>
+              </span>
+              <i></i>
+              <span class="route-node route-execution">
+                <span class="route-icon" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" focusable="false">
+                    <path d="M32 13v8M32 43v8M18.6 18.6l5.6 5.6M39.8 39.8l5.6 5.6M13 32h8M43 32h8M18.6 45.4l5.6-5.6M39.8 24.2l5.6-5.6" />
+                    <circle cx="32" cy="32" r="11" />
+                  </svg>
+                </span>
+                <em>Ejecución</em>
+              </span>
+              <i></i>
+              <span class="route-node route-quality">
+                <span class="route-icon" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" focusable="false">
+                    <circle cx="32" cy="32" r="20" />
+                    <path d="m22 33 7 7 15-17" />
+                  </svg>
+                </span>
+                <em>Calidad</em>
+              </span>
+              <i></i>
+              <span class="route-node route-security">
+                <span class="route-icon" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" focusable="false">
+                    <path d="M32 8 49 16v13c0 12-7.1 21-17 26-9.9-5-17-14-17-26V16l17-8Z" />
+                    <path d="M32 24v17M24 32h16" />
+                  </svg>
+                </span>
+                <em>Seguridad</em>
+              </span>
+              <i></i>
+              <span class="route-node route-continuity">
+                <span class="route-icon" aria-hidden="true">
+                  <svg viewBox="0 0 64 64" focusable="false">
+                    <path d="M50 24A20 20 0 0 0 16 17l-5 6" />
+                    <path d="M11 13v10h10" />
+                    <path d="M14 40a20 20 0 0 0 34 7l5-6" />
+                    <path d="M43 41h10v10" />
+                  </svg>
+                </span>
+                <em>Continuidad</em>
+              </span>
+            </div>
+          </div>
+          <aside class="notes">
+            En esta primera vista presentamos el proyecto de forma integral. La propuesta se divide en cuatro roles complementarios: CIO, PM, QA y CISO/DBA. Cada uno aporta una parte crítica del plan, pero todos convergen en una sola estrategia: transformar NeoCredit App para que crezca con escalabilidad, control, seguridad y continuidad operativa.
+          </aside>
+        </section>
+
+        <section class="slide owner-david hero-slide" data-short-owner="David / CIO" data-owner="Jorge David Hernández Pineda — Gerente de TI / CIO">
+          <div class="slide-meta">
+            <span>Jorge David Hernández Pineda</span>
+            <strong>CIO</strong>
+          </div>
+          <div class="hero-layout">
+            <div class="hero-copy">
+              <span class="kicker">Apertura ejecutiva</span>
+              <h1>NeoCredit App:<br /><span class="title-nowrap">crecimiento que rompe TI</span></h1>
+              <p class="hero-line">El negocio creció más rápido que su infraestructura.</p>
+              <div class="hero-metrics growth-card stagger" aria-label="Crecimiento de usuarios activos en seis meses">
+                <div class="growth-card-heading">
+                  <span class="growth-icon" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" focusable="false">
+                      <circle cx="23" cy="21" r="8" />
+                      <circle cx="42" cy="24" r="7" />
+                      <path d="M9 52v-5c0-9 6.3-16 14-16s14 7 14 16v5" />
+                      <path d="M34 52v-5c0-6 4.4-11 10-11s10 5 10 11v5" />
+                    </svg>
+                  </span>
+                  <span class="metric-caption">Usuarios activos en 6 meses</span>
+                </div>
+                <strong class="mega-counter" data-counter data-start="1000" data-end="100000" data-separator="true">100,000</strong>
+                <span class="metric-delta">de <b>1,000</b> a <b>100,000</b></span>
+                <div class="growth-chart" aria-hidden="true">
+                  <svg viewBox="0 0 760 210" focusable="false">
+                    <defs>
+                      <linearGradient id="growthLineGradient" x1="0" x2="1" y1="0" y2="0">
+                        <stop offset="0%" stop-color="#2563eb" />
+                        <stop offset="55%" stop-color="#00e5ff" />
+                        <stop offset="100%" stop-color="#67e8f9" />
+                      </linearGradient>
+                      <filter id="growthGlow" x="-20%" y="-60%" width="140%" height="220%">
+                        <feGaussianBlur stdDeviation="6" result="blur" />
+                        <feMerge>
+                          <feMergeNode in="blur" />
+                          <feMergeNode in="SourceGraphic" />
+                        </feMerge>
+                      </filter>
+                    </defs>
+                    <path class="chart-baseline" d="M72 158 H684" />
+                    <path class="chart-guide" d="M72 158 C240 158 404 156 526 104" />
+                    <path class="chart-glow" d="M72 158 C252 158 430 151 548 96 C606 70 646 43 684 18" />
+                    <path class="chart-line" d="M72 158 C252 158 430 151 548 96 C606 70 646 43 684 18" />
+                    <path class="chart-arrow" d="M660 19 L684 18 L677 42" />
+                    <circle class="chart-dot start" cx="72" cy="158" r="6" />
+                    <circle class="chart-dot middle" cx="620" cy="58" r="8" />
+                    <circle class="chart-dot end" cx="684" cy="158" r="6" />
+                  </svg>
+                  <div class="chart-labels">
+                    <span><strong>1,000</strong><small>Inicio</small></span>
+                    <span><strong>6 meses</strong></span>
+                  </div>
+                </div>
+              </div>
+              <div class="hero-stat-grid" aria-label="Resumen del crecimiento">
+                <article class="hero-stat-card stagger">
+                  <span class="stat-icon" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" focusable="false">
+                      <rect x="12" y="16" width="40" height="38" rx="6" />
+                      <path d="M21 10v12M43 10v12M12 28h40" />
+                      <path d="M22 38h.1M32 38h.1M42 38h.1M22 47h.1M32 47h.1" />
+                    </svg>
+                  </span>
+                  <strong>6 meses</strong>
+                  <span>Periodo</span>
+                </article>
+                <article class="hero-stat-card stagger">
+                  <span class="stat-icon" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" focusable="false">
+                      <circle cx="23" cy="22" r="8" />
+                      <circle cx="43" cy="25" r="7" />
+                      <path d="M9 53v-5c0-9 6.3-16 14-16s14 7 14 16v5" />
+                      <path d="M35 53v-5c0-6 4.4-11 10-11s10 5 10 11v5" />
+                    </svg>
+                  </span>
+                  <strong>1K → 100K</strong>
+                  <span>Usuarios activos</span>
+                </article>
+                <article class="hero-stat-card stagger">
+                  <span class="stat-icon" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" focusable="false">
+                      <path d="M11 52h42" />
+                      <path d="M18 48v-9M30 48V28M42 48V18" />
+                      <path d="m16 36 11-11 10 8 15-20" />
+                      <path d="M52 13v16M36 13h16" />
+                    </svg>
+                  </span>
+                  <strong>100x</strong>
+                  <span>Escala alcanzada</span>
+                </article>
+              </div>
+            </div>
+            <div class="growth-orbit stagger" aria-hidden="true">
+              <div class="orbit-ring ring-a"></div>
+              <div class="orbit-ring ring-b"></div>
+              <div class="orbit-ring ring-c"></div>
+              <div class="orbit-ring ring-d"></div>
+              <span class="orbit-sweep sweep-a"></span>
+              <span class="orbit-sweep sweep-b"></span>
+              <div class="orbit-core">
+                <span><b data-counter data-start="0" data-end="100">100</b>x</span>
+                <small>escala</small>
+              </div>
+              <i class="node n1"></i>
+              <i class="node n2"></i>
+              <i class="node n3"></i>
+              <i class="node n4"></i>
+              <i class="node n5"></i>
+              <i class="node n6"></i>
+              <i class="node n7"></i>
+              <i class="node n8"></i>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide owner-david operational-diagnosis-slide" data-short-owner="David / CIO" data-owner="Jorge David Hernández Pineda — Gerente de TI / CIO">
+          <div class="slide-meta">
+            <span>Jorge David Hernández Pineda</span>
+            <strong>CIO</strong>
+          </div>
+          <div class="operational-layout">
+            <div class="diagnosis-copy">
+              <span class="kicker danger">Diagnóstico operativo</span>
+              <h2>El problema real<br />no es la app, es la<br />operación de TI.</h2>
+              <p class="slide-lead">Cuatro fallas convierten el crecimiento en interrupciones, riesgo regulatorio y deuda técnica.</p>
+              <div class="risk-card-grid">
+                <article class="risk-card stagger">
+                  <div class="risk-icon" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" role="img">
+                      <path d="M32 7 48 16 32 25 16 16 32 7Z" />
+                      <path d="M16 26 32 35 48 26" />
+                      <path d="M16 38 32 47 48 38" />
+                      <path d="M16 16v12l16 9 16-9V16" />
+                      <path d="M16 38v10l16 9 16-9V38" />
+                    </svg>
+                  </div>
+                  <div>
+                    <span>01</span>
+                    <strong>MVC monolítico</strong>
+                    <p>Sin escalabilidad horizontal.</p>
+                  </div>
+                </article>
+                <article class="risk-card stagger">
+                  <div class="risk-icon" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" role="img">
+                      <ellipse cx="28" cy="14" rx="17" ry="7" />
+                      <path d="M11 14v28c0 4 8 7 17 7 5.5 0 10.3-1.1 13.3-2.9" />
+                      <path d="M45 14v17" />
+                      <path d="M11 28c0 4 8 7 17 7 5 0 9.5-1 12.5-2.6" />
+                      <path class="warning-mark" d="M46 34 58 55H34L46 34Z" />
+                      <path class="warning-mark" d="M46 41v6" />
+                      <path class="warning-mark" d="M46 51h.1" />
+                    </svg>
+                  </div>
+                  <div>
+                    <span>02</span>
+                    <strong>SQL Server saturado</strong>
+                    <p>Consultas y concurrencia bajo presión.</p>
+                  </div>
+                </article>
+                <article class="risk-card stagger">
+                  <div class="risk-icon" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" role="img">
+                      <circle cx="20" cy="18" r="7" />
+                      <circle cx="36" cy="15" r="7" />
+                      <circle cx="50" cy="22" r="7" />
+                      <path d="M7 48v-5c0-7 6-12 13-12s13 5 13 12v5" />
+                      <path d="M28 48v-5c0-5 3-9 8-11" />
+                      <path class="warning-mark" d="M47 34 59 55H35L47 34Z" />
+                      <path class="warning-mark" d="M47 41v6" />
+                      <path class="warning-mark" d="M47 51h.1" />
+                    </svg>
+                  </div>
+                  <div>
+                    <span>03</span>
+                    <strong>Ambientes mezclados</strong>
+                    <p>Dev, QA y prod comparten riesgos.</p>
+                  </div>
+                </article>
+                <article class="risk-card stagger">
+                  <div class="risk-icon" aria-hidden="true">
+                    <svg viewBox="0 0 64 64" role="img">
+                      <rect x="13" y="27" width="32" height="26" rx="5" />
+                      <path d="M20 27v-8c0-8 5-13 13-13s13 5 13 13v8" />
+                      <path d="M29 39h.1" />
+                      <path d="M29 39v5" />
+                      <path class="warning-mark" d="M49 34 61 55H37L49 34Z" />
+                      <path class="warning-mark" d="M49 41v6" />
+                      <path class="warning-mark" d="M49 51h.1" />
+                    </svg>
+                  </div>
+                  <div>
+                    <span>04</span>
+                    <strong>Acceso irrestricto</strong>
+                    <p>Producción sin roles ni auditoría.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="diagram-shell impact-panel stagger" aria-label="Impacto operativo de los bloqueos actuales">
+              <div class="impact-header">Impacto operativo</div>
+              <div class="impact-flow">
+                <div class="user-node">
+                  <svg viewBox="0 0 64 64" aria-hidden="true">
+                    <circle cx="32" cy="22" r="9" />
+                    <path d="M17 52v-5c0-9 6.7-16 15-16s15 7 15 16v5" />
+                  </svg>
+                  <strong>100K</strong>
+                  <span>usuarios</span>
+                </div>
+                <div class="users-to-core" aria-hidden="true"></div>
+                <div class="fragility-core">
+                  <svg viewBox="0 0 86 72" aria-hidden="true">
+                    <path class="warning-mark" d="M43 12 70 59H16L43 12Z" />
+                    <path class="warning-mark" d="M43 29v14" />
+                    <path class="warning-mark" d="M43 51h.1" />
+                  </svg>
+                  <strong>Operación TI<br />frágil</strong>
+                  <span>Arquitectura y control<br />insuficientes</span>
+                </div>
+                <div class="impact-routes">
+                  <article class="impact-route">
+                    <span class="impact-route-line" aria-hidden="true"></span>
+                    <div class="impact-result">
+                      <svg viewBox="0 0 48 48" aria-hidden="true">
+                        <circle cx="24" cy="24" r="17" />
+                        <path d="M24 12v15" />
+                        <path d="M24 34h.1" />
+                      </svg>
+                      <strong>Interrupciones</strong>
+                    </div>
+                  </article>
+                  <article class="impact-route">
+                    <span class="impact-route-line" aria-hidden="true"></span>
+                    <div class="impact-result">
+                      <svg viewBox="0 0 48 48" aria-hidden="true">
+                        <path d="M24 6 38 12v11c0 9-5.7 15.4-14 19-8.3-3.6-14-10-14-19V12l14-6Z" />
+                      </svg>
+                      <strong>Riesgo<br />regulatorio</strong>
+                    </div>
+                  </article>
+                  <article class="impact-route">
+                    <span class="impact-route-line" aria-hidden="true"></span>
+                    <div class="impact-result">
+                      <svg viewBox="0 0 48 48" aria-hidden="true">
+                        <path d="M18 13 8 24l10 11" />
+                        <path d="M30 13 40 24 30 35" />
+                        <path d="M27 9 21 39" />
+                      </svg>
+                      <strong>Deuda<br />técnica</strong>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div class="impact-badge">4 bloqueos críticos</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide owner-david swot-executive-slide" data-short-owner="David / CIO" data-owner="Jorge David Hernández Pineda — Gerente de TI / CIO">
+          <div class="slide-meta">
+            <span>Jorge David Hernández Pineda</span>
+            <strong>CIO</strong>
+          </div>
+          <span class="kicker">FODA ejecutivo</span>
+          <h2>Diagnóstico ejecutivo FODA</h2>
+          <div class="swot-grid" aria-label="Diagnóstico ejecutivo FODA">
+            <article class="swot-card swot-strength stagger">
+              <div class="swot-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 96 96" focusable="false">
+                  <path d="M48 14 72 24v18c0 18-10.2 31.4-24 38-13.8-6.6-24-20-24-38V24l24-10Z" />
+                  <path d="m48 31 5.1 10.4 11.4 1.7-8.3 8.1 2 11.4L48 57.2l-10.2 5.4 2-11.4-8.3-8.1 11.4-1.7L48 31Z" />
+                </svg>
+              </div>
+              <i class="swot-divider" aria-hidden="true"></i>
+              <div class="swot-copy">
+                <span>Fortalezas</span>
+                <ul>
+                  <li>Equipo ágil.</li>
+                  <li>App web multiplataforma.</li>
+                </ul>
+              </div>
+            </article>
+            <article class="swot-card swot-weakness stagger">
+              <div class="swot-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 96 96" focusable="false">
+                  <path d="M22 27h19v16H22zM41 27h19v16H41z" />
+                  <path d="M22 43h15v16H22zM37 43h21v16H37z" />
+                  <path d="M22 59h19v16H22zM41 59h15v16H41z" />
+                  <path d="m65 24-9 23h12L54 74" />
+                  <path d="M70 45h11v28H61V60l9-15Z" />
+                </svg>
+              </div>
+              <i class="swot-divider" aria-hidden="true"></i>
+              <div class="swot-copy">
+                <span>Debilidades</span>
+                <ul>
+                  <li>Arquitectura monolítica.</li>
+                  <li>Sin gobierno formal de TI.</li>
+                </ul>
+              </div>
+            </article>
+            <article class="swot-card swot-opportunity stagger">
+              <div class="swot-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 96 96" focusable="false">
+                  <path d="M31 64H24c-9 0-16-7-16-16s7-16 16-16c3 0 5.8.8 8.2 2.2C35.7 25.8 44 20 54 20c13.3 0 24 10.7 24 24v2c6.8 1.8 10 6.8 10 13 0 7.2-5.8 13-13 13H63" />
+                  <path d="M48 76V45" />
+                  <path d="m34 59 14-14 14 14" />
+                </svg>
+              </div>
+              <i class="swot-divider" aria-hidden="true"></i>
+              <div class="swot-copy">
+                <span>Oportunidades</span>
+                <ul>
+                  <li>Migración cloud.</li>
+                  <li>Automatización CI/CD.</li>
+                </ul>
+              </div>
+            </article>
+            <article class="swot-card swot-threat stagger">
+              <div class="swot-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 96 96" focusable="false">
+                  <path d="M44 16 69 27v18c0 15.2-8.8 27.4-25 35-16.2-7.6-25-19.8-25-35V27l25-11Z" />
+                  <path d="m45 34-9 21h11l-6 18 18-29H48l7-10Z" />
+                  <path d="M70 53 86 81H54L70 53Z" />
+                  <path d="M70 62v8" />
+                  <path d="M70 76h.1" />
+                </svg>
+              </div>
+              <i class="swot-divider" aria-hidden="true"></i>
+              <div class="swot-copy">
+                <span>Amenazas</span>
+                <ul>
+                  <li>Sanciones SIB.</li>
+                  <li>Fraude y ciberataques.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="slide owner-david decision-slide" data-short-owner="David / CIO" data-owner="Jorge David Hernández Pineda — Gerente de TI / CIO">
+          <div class="slide-meta">
+            <span>Jorge David Hernández Pineda</span>
+            <strong>CIO</strong>
+          </div>
+          <span class="kicker success">Decisión CIO</span>
+          <h2>Azure es la opción más viable</h2>
+          <p class="slide-lead decision-lead">La evaluación financiera y operativa favorece a Azure por escalabilidad,<br />tiempo de implementación y cumplimiento SIB.</p>
+          <div class="decision-board" aria-label="Matriz de decisión tecnológica">
+            <article class="option-card winner stagger" aria-label="Opción ganadora Cloud Azure">
+              <div class="winner-heading">
+                <span>Opción A</span>
+                <div class="winner-ribbon">
+                  <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                    <path d="M10 4h12v5.5c0 3.8-2.5 7-6 7s-6-3.2-6-7V4Z" />
+                    <path d="M9.5 7H5v3.2C5 13.4 7.4 16 10.6 16" />
+                    <path d="M22.5 7H27v3.2C27 13.4 24.6 16 21.4 16" />
+                    <path d="M16 17v5.5M11.5 27h9M13 22.5h6" />
+                  </svg>
+                  <span>Ganadora</span>
+                </div>
+              </div>
+              <div class="winner-content">
+                <h3>Cloud Azure</h3>
+                <strong><span data-counter data-start="0" data-end="4.45" data-decimals="2">4.45</span> / 5.0</strong>
+                <p>Gana por escalabilidad, tiempo y cumplimiento SIB.</p>
+              </div>
+              <div class="criteria-bar" aria-label="Criterios de matriz de decisión">
+                <span>
+                  <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                    <ellipse cx="14" cy="8" rx="9" ry="4" />
+                    <path d="M5 8v10c0 2.2 4 4 9 4s9-1.8 9-4V8" />
+                    <path d="M5 13c0 2.2 4 4 9 4s9-1.8 9-4" />
+                    <circle cx="23" cy="22" r="5" />
+                    <path d="M23 19.5v5M20.5 22h5" />
+                  </svg>
+                  CAPEX 25%
+                </span>
+                <span>
+                  <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                    <circle cx="16" cy="16" r="11" />
+                    <path d="M18.7 10.5h-4a3 3 0 0 0 0 6h2.6a3 3 0 0 1 0 6h-4" />
+                    <path d="M16 7.5v4M16 20.5v4" />
+                  </svg>
+                  OPEX 20%
+                </span>
+                <span>
+                  <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                    <circle cx="16" cy="16" r="11" />
+                    <path d="M16 9v7l5 3" />
+                  </svg>
+                  Tiempo 20%
+                </span>
+                <span>
+                  <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                    <path d="M5 25h22" />
+                    <path d="M8 22v-6M15 22v-10M22 22V8" />
+                    <path d="m7 14 5-5 4 4 8-8" />
+                    <path d="M24 5h-5M24 5v5" />
+                  </svg>
+                  Escalabilidad 25%
+                </span>
+                <span>
+                  <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                    <path d="M16 4 26 8v7c0 6.8-4 11-10 13-6-2-10-6.2-10-13V8l10-4Z" />
+                    <path d="m11.5 16 3 3 6-7" />
+                  </svg>
+                  SIB 10%
+                </span>
+              </div>
+            </article>
+            <article class="option-card stagger">
+              <div>
+                <span>Opción B</span>
+                <h3>In-house desde cero</h3>
+                <strong>2.70 / 5.0</strong>
+                <p>Demasiado lento para el crecimiento actual.</p>
+              </div>
+              <svg class="decision-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+                <path d="M10 54h44" />
+                <path d="M30 54V10h18l4 6v38" />
+                <path d="M12 54V28h16v26" />
+                <path d="M36 20h7M36 29h7M36 38h7M18 35h5M18 44h5" />
+              </svg>
+            </article>
+            <article class="option-card stagger">
+              <div>
+                <span>Opción C</span>
+                <h3>On-premise físico</h3>
+                <strong>1.90 / 5.0</strong>
+                <p>Alto CAPEX y escalabilidad limitada.</p>
+              </div>
+              <svg class="decision-icon" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+                <rect x="11" y="11" width="42" height="13" rx="2" />
+                <rect x="11" y="28" width="42" height="13" rx="2" />
+                <rect x="11" y="45" width="42" height="8" rx="2" />
+                <path d="M18 17h2M18 34h2M18 49h2M28 17h16M28 34h16M28 49h16" />
+              </svg>
+            </article>
+          </div>
+          <div class="finance-strip">
+            <article class="finance-metric stagger">
+              <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                <ellipse cx="13" cy="8" rx="8" ry="4" />
+                <path d="M5 8v11c0 2.2 3.6 4 8 4 2 0 3.9-.4 5.3-1" />
+                <path d="M5 13c0 2.2 3.6 4 8 4 2 0 3.9-.4 5.3-1" />
+                <circle cx="22" cy="22" r="5" />
+                <path d="M22 19.5v5M19.5 22h5" />
+              </svg>
+              <span>Inversión inicial</span>
+              <strong>Q450,000</strong>
+            </article>
+            <article class="finance-metric stagger">
+              <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                <circle cx="16" cy="16" r="10" />
+                <path d="M18.6 10.8h-4a2.8 2.8 0 0 0 0 5.6h2.8a2.8 2.8 0 0 1 0 5.6h-4" />
+                <path d="M16 7.5v3.3M16 21.2v3.3" />
+              </svg>
+              <span>OPEX anual</span>
+              <strong>Q156,000</strong>
+            </article>
+            <article class="finance-metric stagger">
+              <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                <path d="M5 26h22" />
+                <path d="M8 22v-6M14 22V10M20 22v-9M26 22V6" />
+                <path d="m7 14 5-5 5 4 8-8" />
+              </svg>
+              <span>Beneficios A1/A2/A3</span>
+              <strong>Q695,000 <small>•</small><br />Q995,000 <small>•</small><br />Q1,295,000</strong>
+            </article>
+            <article class="finance-metric highlight stagger">
+              <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                <path d="M27 16A11 11 0 1 1 16 5v11Z" />
+                <path d="M18 5a11 11 0 0 1 9 9h-9Z" />
+              </svg>
+              <span>ROI 3 años</span>
+              <strong><span data-counter data-start="0" data-end="359.3" data-decimals="1">359.3</span>%</strong>
+            </article>
+            <article class="finance-metric highlight stagger">
+              <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                <path d="M5 25h22" />
+                <path d="M8 22v-6M15 22v-8M22 22V9" />
+                <path d="m7 16 5-5 4 4 8-8" />
+                <path d="M24 7h-5M24 7v5" />
+              </svg>
+              <span>Ganancia neta 3 años</span>
+              <strong>Q2,067,000</strong>
+            </article>
+            <article class="finance-metric highlight stagger">
+              <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                <rect x="6" y="8" width="20" height="18" rx="2" />
+                <path d="M10 5v6M22 5v6M6 14h20" />
+                <path d="M11 19h3M18 19h3M11 23h3M18 23h3" />
+              </svg>
+              <span>Break-even</span>
+              <strong>~10 meses</strong>
+            </article>
+          </div>
+        </section>
+
+        <section class="slide owner-luis charter-slide" data-short-owner="Luis / PM" data-transition-label="Del análisis a la ejecución — Luis / PM" data-owner="Luis Ernesto Ramírez Arana — Project Manager / PM">
+          <div class="slide-meta">
+            <span>Luis Ernesto Ramírez Arana</span>
+            <strong>PM</strong>
+          </div>
+          <div class="split-layout compact">
+            <div>
+              <span class="kicker">Inicio formal</span>
+              <h2>Project Charter: luz verde al proyecto</h2>
+              <p class="slide-lead">El acta convierte la recomendación técnica en un proyecto autorizado, con presupuesto, alcance y exclusiones.</p>
+              <div class="scope-list">
+                <span>Migración Azure</span>
+                <span>CI/CD</span>
+                <span>Seguridad</span>
+                <span>Antifraude</span>
+                <span>Motor crediticio</span>
+              </div>
+              <div class="exclusion-list">
+                <strong>Fuera de alcance</strong>
+                <span>Rediseño frontend</span>
+                <span>Open Banking</span>
+                <span>Historial anterior a 2024</span>
+              </div>
+            </div>
+            <div class="contract-visual">
+              <div class="contract-paper">
+                <span class="doc-label">Project Charter</span>
+                <h3>NeoCredit Cloud &amp; Security Upgrade 2026</h3>
+                <div class="signature-line"></div>
+                <div class="signature-grid">
+                  <span>CIO</span>
+                  <span>PM</span>
+                </div>
+                <strong class="budget">Q450,000</strong>
+                <div class="approved-stamp">Aprobado</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide owner-luis timeline-slide" data-short-owner="Luis / PM" data-owner="Luis Ernesto Ramírez Arana — Project Manager / PM">
+          <div class="slide-meta">
+            <span>Luis Ernesto Ramírez Arana</span>
+            <strong>PM</strong>
+          </div>
+          <span class="kicker">Plan de ejecución</span>
+          <h2>Roadmap marzo-septiembre 2026</h2>
+          <div class="roadmap">
+            <article class="milestone stagger">
+              <span>Mar</span>
+              <strong>Kick-off</strong>
+              <p>Inicio oficial.</p>
+            </article>
+            <article class="milestone stagger">
+              <span>Abr</span>
+              <strong>Dev / QA / prod</strong>
+              <p>CI/CD activo.</p>
+            </article>
+            <article class="milestone stagger">
+              <span>May</span>
+              <strong>RLS + IAM</strong>
+              <p>Accesos controlados.</p>
+            </article>
+            <article class="milestone live stagger">
+              <span>Jun</span>
+              <strong>Go-live Azure SQL MI</strong>
+              <p>Migración completa.</p>
+            </article>
+            <article class="milestone stagger">
+              <span>Jul</span>
+              <strong>Antifraude</strong>
+              <p>Motor de decisión.</p>
+            </article>
+            <article class="milestone stagger">
+              <span>Ago</span>
+              <strong>Auditoría SIB</strong>
+              <p>Post-implementación.</p>
+            </article>
+            <article class="milestone stagger">
+              <span>Sep</span>
+              <strong>Cierre</strong>
+              <p>Métricas finales.</p>
+            </article>
+          </div>
+          <div class="callout-line">Dato clave: junio es el go-live de Azure SQL Managed Instance; septiembre es cierre del proyecto.</div>
+          <div class="focus-metric">
+            <span>Hito H-04</span>
+            <strong>Junio 2026</strong>
+            <em>Azure SQL MI en producción</em>
+          </div>
+        </section>
+
+        <section class="slide owner-luis" data-short-owner="Luis / PM" data-owner="Luis Ernesto Ramírez Arana — Project Manager / PM">
+          <div class="slide-meta">
+            <span>Luis Ernesto Ramírez Arana</span>
+            <strong>PM</strong>
+          </div>
+          <span class="kicker">Gestión del cambio</span>
+          <h2>No vender tecnología, vender beneficios</h2>
+          <p class="slide-lead">WIIFM: cada audiencia adopta el cambio cuando entiende qué gana en su operación diaria.</p>
+          <div class="audience-grid">
+            <article class="audience-card stagger">
+              <div class="person-icon analyst"></div>
+              <span>Analistas</span>
+              <strong>Aprobaciones más rápidas</strong>
+              <p>Menos revisión manual y menos colas.</p>
+            </article>
+            <article class="audience-card stagger">
+              <div class="person-icon admin"></div>
+              <span>Administrativos</span>
+              <strong>Menos errores operativos</strong>
+              <p>Cuotas y reportes con mejor trazabilidad.</p>
+            </article>
+            <article class="audience-card stagger">
+              <div class="person-icon exec"></div>
+              <span>Gerencia</span>
+              <strong>Visibilidad y ROI</strong>
+              <p>Cumplimiento, métricas y decisión financiera.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="slide owner-luis adoption-slide" data-short-owner="Luis / PM" data-owner="Luis Ernesto Ramírez Arana — Project Manager / PM">
+          <div class="slide-meta">
+            <span>Luis Ernesto Ramírez Arana</span>
+            <strong>PM</strong>
+          </div>
+          <div class="split-layout">
+            <div>
+              <span class="kicker success">Adopción operativa</span>
+              <h2>Capacitación por impacto operativo</h2>
+              <p class="slide-lead">El aprendizaje se diseña por rol y se valida antes de producción.</p>
+              <div class="training-list">
+                <span>Micro-sesiones para analistas</span>
+                <span>Workshops para administrativos</span>
+                <span>Sesiones ejecutivas para gerencia</span>
+                <span>Guías rápidas, videos y dashboard KPI</span>
+              </div>
+            </div>
+            <div class="adoption-funnel">
+              <div class="funnel-step" style="--level:100%">
+                <span>Comunicar</span>
+                <strong>100%</strong>
+              </div>
+              <div class="funnel-step" style="--level:92%">
+                <span>Capacitar</span>
+                <strong>roles clave</strong>
+              </div>
+              <div class="funnel-step" style="--level:90%">
+                <span>Validar</span>
+                <strong>≥90%</strong>
+              </div>
+              <div class="funnel-step live" style="--level:82%">
+                <span>Go-live</span>
+                <strong>sin improvisar</strong>
+              </div>
+            </div>
+          </div>
+          <div class="callout-line">Dato clave: prueba práctica aprobada antes del go-live.</div>
+        </section>
+
+        <section class="slide owner-walder hybrid-slide" data-short-owner="Walder / QA" data-transition-label="De la ejecución al control de calidad — Walder / QA" data-owner="Walder Antonio Mayen Juan — Gerente de Calidad / QA Manager">
+          <div class="slide-meta">
+            <span>Walder Antonio Mayen Juan</span>
+            <strong>QA</strong>
+          </div>
+          <div class="split-layout compact">
+            <div>
+              <span class="kicker">Modelo operativo</span>
+              <h2>ITIL 4 + Scrum: control sin matar la agilidad</h2>
+              <p class="slide-lead">NeoCredit necesita velocidad de sprint y control de producción al mismo tiempo.</p>
+              <div class="hybrid-points">
+                <span>Scrum mantiene entregas rápidas cada sprint.</span>
+                <span>ITIL formaliza incidentes, cambios y SLAs.</span>
+                <span>DevOps/CI-CD reduce despliegues riesgosos.</span>
+              </div>
+            </div>
+            <div class="hybrid-system" aria-hidden="true">
+              <div class="hybrid-connector"></div>
+              <div class="hybrid-node hybrid-control">
+                <span>Control</span>
+              </div>
+              <div class="hybrid-node hybrid-velocity">
+                <span>Velocidad</span>
+              </div>
+              <div class="hybrid-bridge">CI/CD</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide owner-walder pdca-slide" data-short-owner="Walder / QA" data-owner="Walder Antonio Mayen Juan — Gerente de Calidad / QA Manager">
+          <div class="slide-meta">
+            <span>Walder Antonio Mayen Juan</span>
+            <strong>QA</strong>
+          </div>
+          <span class="kicker">Mejora continua</span>
+          <h2>PDCA aplicado a NeoCredit</h2>
+          <div class="pdca-layout">
+            <div class="pdca-cycle" aria-label="Ciclo PDCA">
+              <article class="pdca-node plan">
+                <span>Plan</span>
+                <p>Logs, SQL, incidentes y fraude.</p>
+              </article>
+              <article class="pdca-node do">
+                <span>Do</span>
+                <p>Consultas, reglas o alertas.</p>
+              </article>
+              <article class="pdca-node check">
+                <span>Check</span>
+                <p>Medir SQL y falsos positivos.</p>
+              </article>
+              <article class="pdca-node act">
+                <span>Act</span>
+                <p>Estandarizar o replantear.</p>
+              </article>
+              <div class="pdca-ring"></div>
+            </div>
+            <div class="pdca-proof">
+              <strong>1 ciclo completo por mes</strong>
+              <p>Durante los primeros 6 meses post-implementación, priorizando disponibilidad y cumplimiento SIB.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide owner-walder sla-slide" data-short-owner="Walder / QA" data-owner="Walder Antonio Mayen Juan — Gerente de Calidad / QA Manager">
+          <div class="slide-meta">
+            <span>Walder Antonio Mayen Juan</span>
+            <strong>QA</strong>
+          </div>
+          <span class="kicker danger">Operación sin improvisar</span>
+          <h2>SLAs: cuando algo falla, ya no se improvisa</h2>
+          <div class="sla-board">
+            <article class="sla-row p1 stagger">
+              <span>P1 Crítica</span>
+              <strong>15 min</strong>
+              <em>respuesta</em>
+              <strong>4h</strong>
+              <em>resolución</em>
+            </article>
+            <article class="sla-row p2 stagger">
+              <span>P2 Alta</span>
+              <strong>1h</strong>
+              <em>respuesta</em>
+              <strong>8h</strong>
+              <em>resolución</em>
+            </article>
+            <article class="sla-row p3 stagger">
+              <span>P3 Media</span>
+              <strong>4h</strong>
+              <em>respuesta</em>
+              <strong>24h</strong>
+              <em>resolución</em>
+            </article>
+            <article class="sla-row p4 stagger">
+              <span>P4 Baja</span>
+              <strong>8h</strong>
+              <em>respuesta</em>
+              <strong>48h</strong>
+              <em>resolución</em>
+            </article>
+          </div>
+          <div class="callout-line danger">P1 activa escalamiento inmediato al CIO y DRP si corresponde.</div>
+        </section>
+
+        <section class="slide owner-walder dashboard-slide" data-short-owner="Walder / QA" data-owner="Walder Antonio Mayen Juan — Gerente de Calidad / QA Manager">
+          <div class="slide-meta">
+            <span>Walder Antonio Mayen Juan</span>
+            <strong>QA</strong>
+          </div>
+          <span class="kicker success">Dashboard de servicio</span>
+          <h2>KPIs de calidad del servicio</h2>
+          <div class="kpi-dashboard">
+            <article class="kpi-tile primary">
+              <span>Disponibilidad</span>
+              <strong><span data-counter data-start="0" data-end="99.9" data-decimals="1">99.9</span>%</strong>
+              <div class="mini-gauge" data-percent="99.9"></div>
+            </article>
+            <article class="kpi-tile">
+              <span>SQL Server</span>
+              <strong>≤ <span data-counter data-start="0" data-end="200">200</span>ms</strong>
+              <div class="bar-track"><i class="bar-fill" data-width="78%"></i></div>
+            </article>
+            <article class="kpi-tile">
+              <span>Despliegues exitosos</span>
+              <strong>≥ <span data-counter data-start="0" data-end="95">95</span>%</strong>
+              <div class="bar-track"><i class="bar-fill" data-width="95%"></i></div>
+            </article>
+            <article class="kpi-tile">
+              <span>Satisfacción interna</span>
+              <strong>≥ <span data-counter data-start="0" data-end="4.0" data-decimals="1">4.0</span> / 5.0</strong>
+              <div class="bar-track"><i class="bar-fill" data-width="80%"></i></div>
+            </article>
+            <article class="kpi-tile">
+              <span>Aprobación automática</span>
+              <strong>≥ <span data-counter data-start="0" data-end="80">80</span>%</strong>
+              <div class="bar-track"><i class="bar-fill" data-width="80%"></i></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="slide owner-francisco data-slide" data-short-owner="Francisco / CISO-DBA" data-transition-label="Del control a la protección del negocio — Francisco / CISO-DBA" data-owner="Juan Francisco Pérez Samayoa — CISO / DBA">
+          <div class="slide-meta">
+            <span>Juan Francisco Pérez Samayoa</span>
+            <strong>CISO/DBA</strong>
+          </div>
+          <div class="split-layout compact">
+            <div>
+              <span class="kicker">Gobierno de datos</span>
+              <h2>Clasificación de datos: no todo se protege igual</h2>
+              <p class="slide-lead">El control se asigna según sensibilidad, daño potencial y obligación regulatoria.</p>
+              <div class="data-levels">
+                <span><strong>Confidencial:</strong> DPI, NIT, expedientes, finanzas, credenciales y tokens.</span>
+                <span><strong>Uso interno:</strong> manuales ITIL, reportes, logs y documentación técnica.</span>
+                <span><strong>Público:</strong> tasas, plazos, requisitos, FAQ y términos.</span>
+              </div>
+            </div>
+            <div class="shield-visual" aria-hidden="true">
+              <div class="shield-layer public">Público</div>
+              <div class="shield-layer internal">Uso interno</div>
+              <div class="shield-layer confidential">Confidencial</div>
+              <div class="shield-core">3 capas</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide owner-francisco risk-matrix-slide" data-short-owner="Francisco / CISO-DBA" data-owner="Juan Francisco Pérez Samayoa — CISO / DBA">
+          <div class="slide-meta">
+            <span>Juan Francisco Pérez Samayoa</span>
+            <strong>CISO/DBA</strong>
+          </div>
+          <span class="kicker danger">Matriz de riesgos</span>
+          <h2>Qué puede destruir el negocio</h2>
+          <div class="matrix-layout">
+            <div class="heatmap" aria-label="Heatmap probabilidad por impacto">
+              <span class="axis y">Probabilidad</span>
+              <span class="axis x">Impacto</span>
+              <div class="heat-cell low"></div><div class="heat-cell low"></div><div class="heat-cell medium"></div><div class="heat-cell high"></div><div class="heat-cell high"></div>
+              <div class="heat-cell low"></div><div class="heat-cell medium"></div><div class="heat-cell medium"></div><div class="heat-cell high"></div><div class="heat-cell critical risk-dot" data-risk="Ransomware"></div>
+              <div class="heat-cell low"></div><div class="heat-cell medium"></div><div class="heat-cell high"></div><div class="heat-cell high"></div><div class="heat-cell critical risk-dot" data-risk="SIB"></div>
+              <div class="heat-cell medium"></div><div class="heat-cell medium"></div><div class="heat-cell high"></div><div class="heat-cell critical"></div><div class="heat-cell critical risk-dot" data-risk="Fraude"></div>
+              <div class="heat-cell medium"></div><div class="heat-cell high"></div><div class="heat-cell high"></div><div class="heat-cell critical"></div><div class="heat-cell critical risk-dot" data-risk="Filtración"></div>
+            </div>
+            <div class="risk-list">
+              <span class="critical">Filtración de expedientes crediticios · crítico</span>
+              <span class="critical">Fraude financiero y suplantación · crítico</span>
+              <span class="high">Ransomware · alto</span>
+              <span class="high">Incumplimiento SIB · alto</span>
+              <span class="medium">DDoS · medio</span>
+              <span class="medium">SQL Injection · medio</span>
+            </div>
+          </div>
+          <div class="callout-line danger">Dato clave: los riesgos 20/25 exigen acción inmediata, no monitoreo pasivo.</div>
+        </section>
+
+        <section class="slide owner-francisco drp-slide" data-short-owner="Francisco / CISO-DBA" data-owner="Juan Francisco Pérez Samayoa — CISO / DBA">
+          <div class="slide-meta">
+            <span>Juan Francisco Pérez Samayoa</span>
+            <strong>CISO/DBA</strong>
+          </div>
+          <span class="kicker">Continuidad</span>
+          <h2>DRP: el plan B antes del desastre</h2>
+          <div class="drp-architecture">
+            <div class="region primary-region">
+              <span>Región primaria</span>
+              <strong>South Central US</strong>
+              <p>Azure App Service + Azure SQL MI</p>
+            </div>
+            <div class="failover-path">
+              <i></i>
+              <span>Failover</span>
+            </div>
+            <div class="region secondary-region">
+              <span>Región secundaria</span>
+              <strong>East US 2</strong>
+              <p>Geo-réplica + App Service + Blob GRS</p>
+            </div>
+          </div>
+          <div class="rto-grid">
+            <span>Ransomware a Azure SQL MI <strong>RTO 4h</strong></span>
+            <span>Caída de región Azure <strong>RTO 2h</strong></span>
+            <span>Brecha con exfiltración <strong>RTO 8h</strong></span>
+            <span>Backups inmutables <strong>WORM 30 días</strong></span>
+            <span>Redirección de tráfico <strong>Traffic Manager</strong></span>
+          </div>
+        </section>
+
+        <section class="slide owner-francisco crisis-slide" data-short-owner="Francisco / CISO-DBA" data-owner="Juan Francisco Pérez Samayoa — CISO / DBA">
+          <div class="slide-meta">
+            <span>Juan Francisco Pérez Samayoa</span>
+            <strong>CISO/DBA</strong>
+          </div>
+          <span class="kicker danger">Simulación final</span>
+          <h2>Escenario final: ransomware a las <span class="nowrap">3:00 p. m.</span></h2>
+          <div class="incident-timeline">
+            <article class="incident-step alert">
+              <span>3:00 PM</span>
+              <p>Azure detecta cifrado masivo.</p>
+            </article>
+            <article class="incident-step">
+              <span>3:05 PM</span>
+              <p>CISO/DBA confirma y aísla instancia.</p>
+            </article>
+            <article class="incident-step">
+              <span>3:10 PM</span>
+              <p>CIO activa el DRP.</p>
+            </article>
+            <article class="incident-step">
+              <span>3:15 PM</span>
+              <p>Restauración desde backup inmutable.</p>
+            </article>
+            <article class="incident-step">
+              <span>5:30 PM</span>
+              <p>Restauración técnica completada.</p>
+            </article>
+            <article class="incident-step">
+              <span>6:45 PM</span>
+              <p>QA valida integridad.</p>
+            </article>
+            <article class="incident-step success">
+              <span>7:00 PM</span>
+              <p>PM notifica a SIB.</p>
+            </article>
+          </div>
+          <div class="recovery-score">
+            <span>RTO cumplido</span>
+            <strong>3h 45min &lt; 4h</strong>
+          </div>
+        </section>
+
+        <section class="slide thanks-slide" data-short-owner="Cierre" data-owner="Equipo NeoCredit App">
+          <div class="thanks-orbit" aria-hidden="true">
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
+          <div class="thanks-content">
+            <span class="kicker success">Cierre</span>
+            <h2>Gracias por su atención</h2>
+            <p class="slide-lead">Plan Estratégico de Transformación y Gobierno de TI para NeoCredit App</p>
+            <div class="thanks-team" aria-label="Equipo expositor">
+              <span>David / CIO</span>
+              <span>Luis / PM</span>
+              <span>Walder / QA</span>
+              <span>Francisco / CISO-DBA</span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
